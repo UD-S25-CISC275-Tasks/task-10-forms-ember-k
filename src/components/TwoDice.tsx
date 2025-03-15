@@ -12,6 +12,7 @@ export function d6(): number {
 }
 
 export function TwoDice(): React.JSX.Element {
+<<<<<<< HEAD
     const [die1, setDie1] = useState<number>(2);
     const [die2, setDie2] = useState<number>(5);
     let resultMessage = "";
@@ -49,4 +50,7 @@ export function TwoDice(): React.JSX.Element {
             <p>{resultMessage}</p>
         </div>
     );
+=======
+    return <div>Two Dice</div>;
+>>>>>>> origin/task-forms
 }
