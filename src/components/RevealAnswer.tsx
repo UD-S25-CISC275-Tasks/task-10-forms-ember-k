@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { Button } from "react-bootstrap";
 
 export function RevealAnswer(): React.JSX.Element {
-<<<<<<< HEAD
     const [visible, setVisible] = useState<boolean>(false);
     return (
         <div>
@@ -17,7 +16,4 @@ export function RevealAnswer(): React.JSX.Element {
             Answer: {visible && 42}{" "}
         </div>
     );
-=======
-    return <div>Reveal Answer</div>;
->>>>>>> origin/task-forms
 }
