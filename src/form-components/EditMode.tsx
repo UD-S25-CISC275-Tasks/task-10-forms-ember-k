@@ -22,22 +22,40 @@ export function EditMode(): React.JSX.Element {
         <div>
             <h3>Edit Mode</h3>
             <Form.Check
+                label="Enable Edit Mode?"
+                inline
                 type="switch"
                 id="is-edit-mode"
-                label="Enable Edit Mode?"
                 checked={isEditMode}
                 onChange={updateMode}
             />
+            {/*CHatGPT helped with CSS inline styling */}
             {isEditMode && (
-                <Form.Group controlId="formUserName">
+                <Form.Group
+                    controlId="formUserName"
+                    style={{
+                        display: "flex",
+                        justifyContent: "center",
+                        alignItems: "center",
+                        flexDirection: "column",
+                    }}
+                >
                     <Form.Label>Name:</Form.Label>
-                    <Form.Control value={name} onChange={updateName} />
+                    <Form.Control
+                        value={name}
+                        onChange={updateName}
+                        style={{
+                            width: "30%",
+                        }}
+                    />
                     <Form.Check
+                        inline
                         type="checkbox"
                         id="is-student-check"
                         label="I am a student"
                         checked={isStudent}
                         onChange={updateStudentStatus}
+                        style={{ marginLeft: "5px" }}
                     />
                 </Form.Group>
             )}
@@ -47,17 +65,3 @@ export function EditMode(): React.JSX.Element {
         </div>
     );
 }
-/*
-The EditMode component has two states controlled by a switch: the default state shows text 
-indicating the user’s name and whether they are a student, and then the alternate state is 
-an editable form for editing the user’s name and whether they are a student.
-
-    You will need state to handle the component being in “edit mode”, the user’s name, and 
-    whether or not the user is a student.
-
-HINT: If you can’t figure out why you are failing a test, read the test code. The tests 
-are the most specific form of description.
-
-HINT: If an element is rendered not visible, then a test looking for it will fail. If a 
-test fails, check to see if the elements you have written are rendered in the Javascript.
- */
