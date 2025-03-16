@@ -16,7 +16,7 @@ export function CheckAnswer({
         <div>
             <h3>Check Answer</h3>
             <Form.Group controlId="shortAnswerResponse">
-                <Form.Label>Answer:</Form.Label>
+                <Form.Label>Your Answer:</Form.Label>
                 <Form.Control
                     as="textarea"
                     value={answer}
